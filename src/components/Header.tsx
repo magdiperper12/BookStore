@@ -15,18 +15,17 @@ const Header = () => {
 	if (!i18n.isInitialized) return null;
 
 	const navLinks = [
-		{ name: t('home'), href: '/' },
+		{ name: t('Home'), href: '/' },
 		{ name: t('Projects'), href: '/Projects' },
-		{ name: t('template'), href: '/template' },
+		{ name: t('About'), href: '/About' },
 		{ name: t('contact'), href: '/Contact' },
-		{ name: t('pricing'), href: '/Pricing' },
 	];
 	return (
 		<header className='backdrop-blur-lg dark:bg-black/10 bg-white/10  fixed   w-full pb-2   text-darkprimary  dark:text-white  shadow-lg'>
 			<div className='mx-auto flex h-16  pt-1 items-center justify-between px-4 sm:px-6 lg:px-8'>
 				<Link href='/'>
 					<Image
-						src='/image/logo.png'
+						src='/favicon.png'
 						alt='شركة كودا - تطوير البرمجيات والذكاء الاصطناعي'
 						width={50}
 						height={50}
@@ -42,7 +41,7 @@ const Header = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.3, delay: 0.2 * i }}>
 							<Link
-								className='hover:text-yellow-400 transition focus:text-yellow-500  px-3'
+								className='hover:text-third transition focus:text-darkthird  px-3'
 								href={link.href}>
 								{link.name}
 							</Link>
@@ -56,7 +55,7 @@ const Header = () => {
 					<Lang />
 					{/* Mobile Menu Button */}
 					<button
-						className='lg:hidden  p-2 text-darkprimary text-2xl dark:text-gray-100'
+						className='lg:hidden  p-2 text-darkprimary text-2xl dark:text-primary'
 						onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? (
 							<div>
@@ -81,7 +80,7 @@ const Header = () => {
 						transition={{ duration: 0.3 }}
 						className='fixed z-50  w-full left-0 top-0 lg:hidden px-4 pt-4 pb-6 space-y-10 bg-secoundry dark:bg-darkprimary min-h-screen'>
 						<button
-							className='lg:hidden fixed right-4 top-4  p-2 text-darkprimary text-3xl dark:text-gray-100'
+							className='lg:hidden fixed right-4 top-4  p-2 text-darkprimary text-3xl dark:text-primary'
 							onClick={() => setIsOpen(!isOpen)}>
 							{isOpen ? (
 								<div>
@@ -101,7 +100,7 @@ const Header = () => {
 								transition={{ duration: 0.3, delay: 0.2 * i }}
 								className='ps-5'>
 								<Link
-									className='hover:text-third transition focus:text-yellow-500 text-2xl font-bold'
+									className='hover:text-third transition focus:text-darkthird text-2xl font-bold'
 									href={link.href}>
 									{link.name}
 								</Link>

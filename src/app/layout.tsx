@@ -8,20 +8,22 @@ import BackToTopButton from '../components/BackToTopButton';
 const roboto = Roboto({ subsets: ['latin'], weight: '700' });
 
 export const metadata: Metadata = {
-	title: ' كودا',
+	metadataBase: new URL('https://abonawas.com'),
+	title:
+		'أبو نواس - الحدادة والكريتال | Abo Nawas The Leading Metalwork Wrought Iron',
 	description:
-		'شركة كودا هي شركة رائدة في تقديم خدمات تصميم وبرمجة المواقع الإلكترونية وإنشاء تطبيقات الهاتف. نقدم حلولاً مبتكرة في الذكاء الاصطناعي وتطوير البرمجيات لدعم نجاح الأعمال في كفر الشيخ وطنطا.',
+		'أبو نواس - خبرة 35 سنة في تصميم وتصنيع البوابات الحديدية، درابزين السلالم، الأسوار، والهياكل المعدنية. نقدم حلول حدادة متينة وجميلة تناسب المنازل والفلل والمصانع. نخدم كفر الشيخ وطنطا والدلتا.',
 	openGraph: {
-		title: 'أفضل شركة برمجيات في كفر الشيخ وطنطا - كودا',
+		title: 'أبو نواس حديد | Abo Nawas Iron Designs',
 		description:
-			'شركة كودا تقدم حلولاً مبتكرة في الذكاء الاصطناعي وتطوير البرمجيات، مع التركيز على تلبية احتياجات الشركات في العالم الرقمي بكفر الشيخ وطنطا.',
+			'اكتشف حلول "أبو نواس" المتكاملة في أعمال الحدادة والكريتال منذ عام 1987 — تصميم وتصنيع بوابات حديد فاخرة، درابزين سلالم، شبابيك حماية، مظلات سيارات، برجولات حدائق، شعارات معدنية، فواصل زخرفية، وسلالم حديد.',
 		type: 'website',
 		locale: 'ar_EG',
-		url: 'https://cuda.aiotgroups.com/',
+		url: 'https://abonawas.com/',
 		images: [
 			{
-				url: '/image/logo.png',
-				alt: 'شركة كودا - تطوير البرمجيات والذكاء الاصطناعي',
+				url: 'https://abonawas.com/favicon.png',
+				alt: 'أبو نواس - حدادة وكريتال منذ 1987',
 				width: 800,
 				height: 600,
 			},
@@ -29,13 +31,19 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'كودا - حلول البرمجيات والذكاء الاصطناعي في كفر الشيخ وطنطا',
+		title: 'أبو نواس حديد | Abo Nawas Iron Designs',
 		description:
-			'شركة كودا تقدم حلولاً مبتكرة في الذكاء الاصطناعي وتطوير البرمجيات لمساعدة الشركات على النجاح في العالم الرقمي.',
-		images: ['/image/logo.png'],
+			'تأسست ورشة الشرنوبي عام 1987 لتقديم أفضل أعمال الحدادة والكريتال. خدماتنا تشمل تصنيع البوابات الحديدية، السلالم، الأسوار، الشبابيك، المظلات، الهياكل المعدنية، والديكورات الحديثة.',
+		images: ['/favicon.png'],
 	},
 	icons: {
-		icon: '/image/logo.png',
+		icon: '/favicon.png',
+		shortcut: '/favicon.ico',
+		apple: '/favicon.png',
+		other: {
+			rel: 'manifest',
+			url: '/manifest.json',
+		},
 	},
 };
 
@@ -53,51 +61,101 @@ export default function RootLayout({
 				/>
 				<meta
 					name='author'
-					content='كودا'
+					content='أبو نواس | Abo Nawas'
+				/>
+				<meta
+					name='robots'
+					content='index, follow'
 				/>
 				<meta
 					name='application-name'
-					content='كودا'
+					content='أبو نواس لأعمال الحدادة والكريتال'
+				/>
+				<meta
+					name='image'
+					content='https://abonawas.com/favicon.png'
 				/>
 				<link
 					rel='canonical'
-					href='https://cuda.aiotgroups.com/'
+					href='https://abonawas.com/'
 				/>
+
+				{/* Favicon */}
+				<link
+					rel='icon'
+					type='image/png'
+					sizes='32x32'
+					href='/favicon.png'
+				/>
+				<link
+					rel='shortcut icon'
+					href='/favicon.ico'
+					type='image/x-icon'
+				/>
+				<link
+					rel='manifest'
+					href='/manifest.json'
+				/>
+
+				{/* Structured Data */}
 				<script
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{
-						__html: JSON.stringify({
-							'@context': 'https://schema.org',
-							'@type': 'Organization',
-							name: 'كودا',
-							url: 'https://www.cuda.com',
-							logo: 'https://cuda.aiotgroups.com/image/logo.png',
-							sameAs: [
-								'https://www.facebook.com/Cuda',
-								'https://www.linkedin.com/company/Cuda',
-								'https://twitter.com/Cuda',
-							],
-							description:
-								'كودا هي شركة رائدة في تقديم خدمات تصميم وبرمجة المواقع الإلكترونية وإنشاء تطبيقات الهاتف مع حلول في الذكاء الاصطناعي لدعم نجاح الأعمال.',
-							address: {
-								'@type': 'PostalAddress',
-								addressLocality: 'كفر الشيخ',
-								addressCountry: 'EG',
+						__html: JSON.stringify([
+							{
+								'@context': 'https://schema.org',
+								'@type': 'Organization',
+								name: 'أبو نواس | Abo Nawas - Metalwork Since 1987',
+								url: 'https://abonawas.com/',
+								logo: 'https://abonawas.com/favicon.png',
+								sameAs: [
+									'https://www.facebook.com/people/أبو-نواس-للتجارة-والمقاولات-والتشكيلات-المعدنية/100063877210927/',
+									'https://wa.me/201002950495',
+								],
+								description:
+									'ورشة أبو نواس تأسست عام 1987 على يد الحاج عبد السند الشرنوبي...',
+								address: {
+									'@type': 'PostalAddress',
+									addressLocality: 'كفر الشيخ',
+									addressRegion: 'دلتا مصر',
+									addressCountry: 'EG',
+								},
+								contactPoint: {
+									'@type': 'ContactPoint',
+									telephone: '+20-100-295-0495',
+									contactType: 'خدمة العملاء',
+									areaServed: 'EG',
+									availableLanguage: ['ar', 'en'],
+								},
 							},
-							contactPoint: {
-								'@type': 'ContactPoint',
-								telephone: '+20-100-000-0000',
-								contactType: 'خدمة العملاء',
-								areaServed: 'EG',
-								availableLanguage: ['العربية', 'الإنجليزية'],
+							{
+								'@context': 'https://schema.org',
+								'@type': 'WebSite',
+								url: 'https://abonawas.com/',
+								name: 'أبو نواس | Abo Nawas - Metalwork Since 1987',
+								potentialAction: {
+									'@type': 'SearchAction',
+									target: 'https://abonawas.com/?s={search_term_string}',
+									'query-input': 'required name=search_term_string',
+								},
 							},
-						}),
+							{
+								'@context': 'https://schema.org',
+								'@type': 'ImageObject',
+								contentUrl: 'https://abonawas.com/favicon.png',
+								url: 'https://abonawas.com/favicon.png',
+								width: 800,
+								height: 600,
+								name: 'شعار أبو نواس',
+							},
+						]),
 					}}
 				/>
 			</head>
+
 			<body
-				className={`bg-gradient-to-r relative ${roboto.className} custom-scroll overflow-x-hidden bg-primary dark:bg-darkprimary`}>
-				<div className='sticky top-0  z-50'>
+				className={`bg-gradient-to-r relative ${roboto.className} text-darkprimary dark:text-primary custom-scroll overflow-x-hidden bg-primary dark:bg-darkprimary`}>
+				<div className='fixed top-0 z-50'>
 					<Header />
 				</div>
 				{children}

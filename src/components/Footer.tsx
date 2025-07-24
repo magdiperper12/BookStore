@@ -114,10 +114,14 @@ const Footer = () => {
 				</div>
 			</div>
 
-			<div className='text-center text-sm border-t text-darkprimary dark:text-darkforth border-gray-300 dark:border-gray-700 pt-6'>
+			<div className='text-center text-sm border-t text-darkprimary dark:text-darkforth border-secoundry dark:border-darksecoundry pt-6'>
 				&copy; 2025
-				<span className='text-darkthird dark:text-third'>TOKEN</span>. All
-				rights reserved.
+				<Link
+					href={'https://www.linkedin.com/in/magdi-perper-95b132343/'}
+					className='text-darkthird dark:text-third px-1'>
+					Magdi
+				</Link>
+				All rights reserved.
 			</div>
 		</motion.footer>
 	);
