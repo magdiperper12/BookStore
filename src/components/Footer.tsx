@@ -4,10 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-	const { t } = useTranslation();
 	const [hideFooter, setHideFooter] = useState(false);
 
 	useEffect(() => {
@@ -28,11 +26,11 @@ const Footer = () => {
 				{/* Company Info */}
 				<div>
 					<h2 className='text-2xl font-bold mb-4 text-darkthird dark:text-third'>
-						{t('footerTitle')}
+						{'footerTitle'}
 					</h2>
 					<p className='text-sm leading-6 text-darkprimary dark:text-darkforth'>
 						<span className='text-darkthird dark:text-third'>TOKEN</span>{' '}
-						{t('footerDesc')}
+						{'footerDesc'}
 					</p>
 				</div>
 
@@ -40,14 +38,14 @@ const Footer = () => {
 				<div className='grid grid-cols-2 '>
 					<div>
 						<h3 className='text-lg font-semibold mb-4 text-third dark:text-white'>
-							{t('quickLinks')}
+							{'quickLinks'}
 						</h3>
 						<ul className='space-y-2 text-sm'>
 							{[
-								{ label: t('quickHome'), href: '/' },
-								{ label: t('quickAbout'), href: '/about' },
-								{ label: t('quickServices'), href: '/services' },
-								{ label: t('quickContact'), href: '/contact' },
+								{ label: 'quickHome', href: '/' },
+								{ label: 'quickAbout', href: '/about' },
+								{ label: 'quickServices', href: '/services' },
+								{ label: 'quickContact', href: '/contact' },
 							].map(({ label, href }) => (
 								<li key={label}>
 									<Link
@@ -64,14 +62,14 @@ const Footer = () => {
 
 					<div>
 						<h3 className='text-lg font-semibold mb-4 text-third dark:text-white'>
-							{t('quickResources')}
+							{'quickResources'}
 						</h3>
 						<ul className='space-y-2 text-sm'>
 							{[
-								{ label: t('quickCareers'), href: '/careers' },
-								{ label: t('quickBlog'), href: '/blog' },
-								{ label: t('quickPricing'), href: '/pricing' },
-								{ label: t('quickSupport'), href: '/support' },
+								{ label: 'quickCareers', href: '/careers' },
+								{ label: 'quickBlog', href: '/blog' },
+								{ label: 'quickPricing', href: '/pricing' },
+								{ label: 'quickSupport', href: '/support' },
 							].map(({ label, href }) => (
 								<li key={label}>
 									<Link
@@ -87,7 +85,7 @@ const Footer = () => {
 				{/* Socials */}
 				<div>
 					<h3 className='text-lg font-semibold mb-4 text-third dark:text-white'>
-						{t('followUs')}
+						{'followUs'}
 					</h3>
 					<div className='flex gap-4 text-lg'>
 						<a

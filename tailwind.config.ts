@@ -13,10 +13,11 @@ const config: Config = {
 				secoundry: '#FFD8A9',
 				third: '#F1A661',
 				forth: '#E38B29',
-				darkprimary: '#000000',
+				darkprimary: '#222c31',
 				darksecoundry: '#854836',
 				darkthird: '#FFB22C',
 				darkforth: '#F7F7F7',
+				textColor: '#2a5d63',
 			},
 			animation: {
 				fadeIn: 'fadeIn 0.7s ease-in-out forwards',

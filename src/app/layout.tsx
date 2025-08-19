@@ -8,22 +8,21 @@ import BackToTopButton from '../components/BackToTopButton';
 const roboto = Roboto({ subsets: ['latin'], weight: '700' });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://abonawas.com'),
-	title:
-		'أبو نواس - الحدادة والكريتال | Abo Nawas The Leading Metalwork Wrought Iron',
+	metadataBase: new URL('https://section-library.com'),
+	title: 'مكتبة سيكشن | Section Library - بيع وشراء الكتب',
 	description:
-		'أبو نواس - خبرة 35 سنة في تصميم وتصنيع البوابات الحديدية، درابزين السلالم، الأسوار، والهياكل المعدنية. نقدم حلول حدادة متينة وجميلة تناسب المنازل والفلل والمصانع. نخدم كفر الشيخ وطنطا والدلتا.',
+		'مكتبة سيكشن - وجهتك لاقتناء أحدث وأهم الكتب في مختلف المجالات: الأدب، التاريخ، التنمية البشرية، الكتب العلمية، والدراسية. نوفر كتبًا أصلية بأسعار مناسبة مع خدمة التوصيل لجميع المحافظات.',
 	openGraph: {
-		title: 'أبو نواس حديد | Abo Nawas Iron Designs',
+		title: 'مكتبة سيكشن | Section Library',
 		description:
-			'اكتشف حلول "أبو نواس" المتكاملة في أعمال الحدادة والكريتال منذ عام 1987 — تصميم وتصنيع بوابات حديد فاخرة، درابزين سلالم، شبابيك حماية، مظلات سيارات، برجولات حدائق، شعارات معدنية، فواصل زخرفية، وسلالم حديد.',
+			'اكتشف مكتبة سيكشن — مكتبتك الشاملة التي تضم آلاف الكتب والروايات العربية والعالمية. نوفر روايات حديثة وكلاسيكيات، مراجع علمية، وكتب للأطفال. تسوق الآن بسهولة عبر موقعنا الإلكتروني.',
 		type: 'website',
 		locale: 'ar_EG',
-		url: 'https://abonawas.com/',
+		url: 'https://section-library.com/',
 		images: [
 			{
-				url: 'https://abonawas.com/favicon.png',
-				alt: 'أبو نواس - حدادة وكريتال منذ 1987',
+				url: 'https://section-library.com/favicon.png',
+				alt: 'مكتبة سيكشن - كتب وروايات في جميع المجالات',
 				width: 800,
 				height: 600,
 			},
@@ -31,9 +30,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'أبو نواس حديد | Abo Nawas Iron Designs',
+		title: 'مكتبة سيكشن | Section Library',
 		description:
-			'تأسست ورشة الشرنوبي عام 1987 لتقديم أفضل أعمال الحدادة والكريتال. خدماتنا تشمل تصنيع البوابات الحديدية، السلالم، الأسوار، الشبابيك، المظلات، الهياكل المعدنية، والديكورات الحديثة.',
+			'مكتبة سيكشن - مكانك المثالي لاقتناء الكتب والروايات. تشكيلة واسعة من الأدب العربي والعالمي، الكتب التعليمية، وكتب الأطفال. تسوق الآن عبر الإنترنت بسهولة وأمان.',
 		images: ['/favicon.png'],
 	},
 	icons: {
@@ -61,7 +60,7 @@ export default function RootLayout({
 				/>
 				<meta
 					name='author'
-					content='أبو نواس | Abo Nawas'
+					content='مكتبة سيكشن | Section Library'
 				/>
 				<meta
 					name='robots'
@@ -69,18 +68,17 @@ export default function RootLayout({
 				/>
 				<meta
 					name='application-name'
-					content='أبو نواس لأعمال الحدادة والكريتال'
+					content='مكتبة سيكشن - بيع وشراء الكتب'
 				/>
 				<meta
 					name='image'
-					content='https://abonawas.com/favicon.png'
+					content='https://section-library.com/favicon.png'
 				/>
 				<link
 					rel='canonical'
-					href='https://abonawas.com/'
+					href='https://section-library.com/'
 				/>
 
-				{/* Favicon */}
 				<link
 					rel='icon'
 					type='image/png'
@@ -97,7 +95,6 @@ export default function RootLayout({
 					href='/manifest.json'
 				/>
 
-				{/* Structured Data */}
 				<script
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{
@@ -105,24 +102,24 @@ export default function RootLayout({
 							{
 								'@context': 'https://schema.org',
 								'@type': 'Organization',
-								name: 'أبو نواس | Abo Nawas - Metalwork Since 1987',
-								url: 'https://abonawas.com/',
-								logo: 'https://abonawas.com/favicon.png',
+								name: 'مكتبة سيكشن | Section Library',
+								url: 'https://section-library.com/',
+								logo: 'https://section-library.com/favicon.png',
 								sameAs: [
-									'https://www.facebook.com/people/أبو-نواس-للتجارة-والمقاولات-والتشكيلات-المعدنية/100063877210927/',
-									'https://wa.me/201002950495',
+									'https://www.facebook.com/sectionlibrary',
+									'https://wa.me/201000000000',
 								],
 								description:
-									'ورشة أبو نواس تأسست عام 1987 على يد الحاج عبد السند الشرنوبي...',
+									'مكتبة سيكشن وجهتك لاقتناء الكتب والروايات في مختلف المجالات: الأدب، التاريخ، التنمية البشرية، العلوم، الكتب الدراسية وكتب الأطفال. نوفر كتبًا أصلية بأسعار مناسبة مع خدمة توصيل لجميع المحافظات.',
 								address: {
 									'@type': 'PostalAddress',
-									addressLocality: 'كفر الشيخ',
-									addressRegion: 'دلتا مصر',
+									addressLocality: 'القاهرة',
+									addressRegion: 'مصر',
 									addressCountry: 'EG',
 								},
 								contactPoint: {
 									'@type': 'ContactPoint',
-									telephone: '+20-100-295-0495',
+									telephone: '+20-100-000-0000',
 									contactType: 'خدمة العملاء',
 									areaServed: 'EG',
 									availableLanguage: ['ar', 'en'],
@@ -131,22 +128,22 @@ export default function RootLayout({
 							{
 								'@context': 'https://schema.org',
 								'@type': 'WebSite',
-								url: 'https://abonawas.com/',
-								name: 'أبو نواس | Abo Nawas - Metalwork Since 1987',
+								url: 'https://section-library.com/',
+								name: 'مكتبة سيكشن | Section Library',
 								potentialAction: {
 									'@type': 'SearchAction',
-									target: 'https://abonawas.com/?s={search_term_string}',
+									target: 'https://section-library.com/?s={search_term_string}',
 									'query-input': 'required name=search_term_string',
 								},
 							},
 							{
 								'@context': 'https://schema.org',
 								'@type': 'ImageObject',
-								contentUrl: 'https://abonawas.com/favicon.png',
-								url: 'https://abonawas.com/favicon.png',
+								contentUrl: 'https://section-library.com/favicon.png',
+								url: 'https://section-library.com/favicon.png',
 								width: 800,
 								height: 600,
-								name: 'شعار أبو نواس',
+								name: 'شعار مكتبة سيكشن',
 							},
 						]),
 					}}
@@ -158,7 +155,9 @@ export default function RootLayout({
 				<div className='fixed top-0 z-50'>
 					<Header />
 				</div>
-				{children}
+				<div className='pt-32 pb-28  overflow-x-hidden xl:w-10/12 m-auto container px-4'>
+					{children}
+				</div>
 				<Footer />
 				<BackToTopButton />
 			</body>
