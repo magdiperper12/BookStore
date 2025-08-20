@@ -17,7 +17,8 @@ const Header = () => {
 	};
 	const navLinks = [
 		{ name: 'المحاضرات', href: '/lecture' },
-		{ name: 'الاختبارات', href: '/Projects' },
+		{ name: 'الاختبارات', href: '/testing' },
+		{ name: 'الملف الشخصي', href: '/profile' },
 	];
 	return (
 		<header className='backdrop-blur-lg dark:bg-black/10 bg-white/10  fixed   w-full pb-2   text-textColor  dark:text-white  shadow-lg shadow-textColor/10'>
@@ -57,7 +58,7 @@ const Header = () => {
 							تسجيل الخروج <FaSignOutAlt className='text-sm font-bold ' />
 						</h4>
 					</div>
-					<div>
+					<Link href={'/profile'}>
 						<Image
 							alt='profile'
 							width={15}
@@ -65,7 +66,7 @@ const Header = () => {
 							src={'/image/student.png'}
 							className='w-9 h-9'
 						/>
-					</div>
+					</Link>
 					<button
 						onClick={toggleclick}
 						className='lg:hidden flex text-3xl font-extrabold'>
