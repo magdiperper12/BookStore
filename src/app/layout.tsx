@@ -4,7 +4,7 @@ import './globals.css';
 import { Roboto } from 'next/font/google';
 import { Metadata } from 'next';
 import BackToTopButton from '../components/BackToTopButton';
-import { ExamProvider } from './context/ExamContext';
+import { ExamProvider } from './(Root)/context/ExamContext';
 
 const roboto = Roboto({ subsets: ['latin'], weight: '700' });
 
@@ -156,7 +156,7 @@ export default function RootLayout({
 				<div className='fixed top-0 z-50'>
 					<Header />
 				</div>
-				<div className='pt-32 pb-28  overflow-x-hidden xl:w-10/12 m-auto container px-4'>
+				<div className='py-28  overflow-x-hidden xl:w-10/12 m-auto container px-4'>
 					<ExamProvider>{children}</ExamProvider>
 				</div>
 				<Footer />
