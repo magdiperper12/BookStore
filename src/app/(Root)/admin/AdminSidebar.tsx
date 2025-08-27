@@ -8,7 +8,6 @@ const navItems = [
 	{ href: '/admin', label: 'Dashboard', icon: <FaTachometerAlt /> },
 	{ href: '/admin/management', label: 'User Management', icon: <FaUsers /> },
 	{ href: '/admin/subjects', label: 'Subjects', icon: <FaBook /> },
-	{ href: '/admin/settings', label: 'Settings', icon: <FaCog /> },
 ];
 
 export default function Sidebar() {

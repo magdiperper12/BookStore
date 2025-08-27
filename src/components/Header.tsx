@@ -24,9 +24,6 @@ const Header = () => {
 	};
 	const navLinks = [
 		{ name: 'المحاضرات', href: '/lecture' },
-		{ name: 'الاختبارات', href: '/testing' },
-		{ name: 'جميع المواد', href: '/subject' },
-		{ name: 'الملف الشخصي', href: '/profile' },
 		{ name: 'الادمن ', href: '/admin' },
 	];
 	useEffect(() => {
@@ -66,12 +63,14 @@ const Header = () => {
 						))}
 					</nav>
 					<div className='flex gap-3 justify-center items-center'>
-						<div className='md:flex hidden flex-col gap-[2px]'>
+						<Link
+							href={'/profile'}
+							className='md:flex hidden flex-col gap-[2px]'>
 							<h1>مجدي صالح</h1>
 							<h4 className='text-xs text-red-500 flex justify-center items-center gap-2'>
 								تسجيل الخروج <FaSignOutAlt className='text-sm font-bold ' />
 							</h4>
-						</div>
+						</Link>
 						<Link href={'/profile'}>
 							<Image
 								alt='profile'

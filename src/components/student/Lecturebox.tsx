@@ -13,20 +13,18 @@ interface dataType {
 	image: string;
 }
 type Exam = {
+	id: number;
 	status: 'متاح' | 'مكتمل';
 };
 
 const Lecture = ({ title, doctorName, date, image }: dataType) => {
 	const [exams] = useState<Exam[]>([
 		{
+			id: 1,
 			status: 'متاح',
 		},
-		{
-			status: 'مكتمل',
-		},
-		{
-			status: 'متاح',
-		},
+		{ id: 2, status: 'مكتمل' },
+		{ id: 3, status: 'متاح' },
 	]);
 
 	const router = useRouter();
