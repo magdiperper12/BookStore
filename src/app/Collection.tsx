@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import LecturePage from './(Root)/lecture/page';
+import LecturePage from './(Root)/student/page';
 
 function Collection() {
 	return (
